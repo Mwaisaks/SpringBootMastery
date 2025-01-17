@@ -7,10 +7,13 @@
     <!-- bean definitions here -->
 
     <bean id = "Dev" class = "com.mwaisaka.Dev">
+        <property name="Laptop" ref = "Lap1" />
 
+<!--        <property name="age" value="12" />-->
+<!--        <constructor-arg value="14" />-->
     </bean>
 
-    <bean id = "Laptop" class = "com.mwaisaka.Laptop">
+    <bean id = "Lap1" class = "com.mwaisaka.Laptop">
 
     </bean>
 </beans>

@@ -8,7 +8,10 @@ public class App
     public static void main( String[] args )
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml"); //creates the container
-        //Dev obj = (Dev) context.getBean("Dev");
-        //obj.build();
+        Dev obj = (Dev) context.getBean("Dev");
+
+        //obj.setAge(18);
+        //System.out.println(obj.getAge());
+        obj.build();
     }
 }
