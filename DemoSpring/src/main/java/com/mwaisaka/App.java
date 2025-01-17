@@ -10,6 +10,9 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml"); //creates the container
         Dev obj = (Dev) context.getBean("Dev");
 
+        //getBean by type
+        //Dev onj = context.getBean(Dev.class);
+
         //obj.setAge(18);
         //System.out.println(obj.getAge());
         obj.build();

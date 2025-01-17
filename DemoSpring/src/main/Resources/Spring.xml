@@ -6,14 +6,17 @@
 
     <!-- bean definitions here -->
 
-    <bean id = "Dev" class = "com.mwaisaka.Dev">
-        <property name="Laptop" ref = "Lap1" />
-
-<!--        <property name="age" value="12" />-->
-<!--        <constructor-arg value="14" />-->
+    <bean id = "Dev" class = "com.mwaisaka.Dev" autowire="byName">
+<!--        <property name="computer" ref="desk1" />-->
     </bean>
 
-    <bean id = "Lap1" class = "com.mwaisaka.Laptop">
+    <!-- you can't reference computer directly because it's an interface
+    using autowire = bytype you can use the primary attribute primary = "true" -->
+    <bean id = "computer" class = "com.mwaisaka.Laptop">
+
+    </bean>
+
+    <bean id="desk1" class="com.mwaisaka.Desktop" >
 
     </bean>
 </beans>
