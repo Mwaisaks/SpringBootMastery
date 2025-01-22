@@ -1,17 +1,19 @@
 package com.mwaisaka.SimpleWeb.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.stereotype.Component;
 
-@Data
+@Component
+@Entity
 public class Product {
 
+    @Id
     private int prodId;
     private String prodName;
     private int prodPrice;
 
-    public Product(int prodId, String prodName, int prodPrice) {
+    public Product() {
         this.prodId = prodId;
         this.prodName = prodName;
         this.prodPrice = prodPrice;
@@ -39,5 +41,14 @@ public class Product {
 
     public void setProdPrice(int prodPrice) {
         this.prodPrice = prodPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "prodId=" + prodId +
+                ", prodName='" + prodName + '\'' +
+                ", prodPrice=" + prodPrice +
+                '}';
     }
 }
