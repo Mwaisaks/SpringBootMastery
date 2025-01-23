@@ -1,0 +1,1 @@
+The backedn part is almost done, so we're getting into the rect.js part, I have about three projects that I should be working on from this week
